@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import Features from "@/components/Features";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function Home() {
         <HeroSection />
         <Features />
       </div>
+      <Footer />
     </main>
   );
 }
