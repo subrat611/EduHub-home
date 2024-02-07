@@ -21,7 +21,12 @@ const HeroSection = () => {
           Welcome to our Learning Management System <br />
           your gateway to a seamless educational experience.
         </p>
-        <Button onClick={navigateToFeaturesSection}>Explore features</Button>
+        <Button
+          onClick={navigateToFeaturesSection}
+          className="md:text-base md:py-5 md:px-3 "
+        >
+          Explore features
+        </Button>
       </div>
     </div>
   );
