@@ -1,4 +1,3 @@
-import { forwardRef } from "react";
 import { Button } from "./ui/button";
 
 const HeroSection = () => {
