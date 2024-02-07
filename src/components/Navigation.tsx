@@ -12,8 +12,8 @@ const Navigation = () => {
             width="55"
             height="55"
             viewBox="977.00 1227.28 153.99 152.43"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <defs />
             <g transform="matrix(1, 0, 0, 1, 1019.28, 1263.07)" opacity="1">
