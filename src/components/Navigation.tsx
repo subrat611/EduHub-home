@@ -1,7 +1,8 @@
+import { useState } from "react";
+import { easeIn, motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { MenuCloseIconBuddyIcon, MenuIconBuddyIcon } from "./icons";
-import { useState } from "react";
 
 const Navigation = () => {
   const [isMobMenuOpen, setIsMobMenuOpen] = useState(false);
@@ -77,21 +78,24 @@ const Navigation = () => {
           >
             {isMobMenuOpen ? <MenuCloseIconBuddyIcon /> : <MenuIconBuddyIcon />}
           </Button>
-          <ul
-            className={`bg-gray-800  items-end space-x-5 space-y-3 mt-3 p-5 rounded-lg text-gray-200 ${
-              isMobMenuOpen ? "flex flex-col" : "hidden"
-            }`}
-          >
-            <Link href="/" onClick={handleOpenMenu}>
-              <li className="hover:text-gray-50">Admin</li>
-            </Link>
-            <Link href="/" onClick={handleOpenMenu}>
-              <li className="hover:text-gray-50">Assessment</li>
-            </Link>
-            <Link href="/" onClick={handleOpenMenu}>
-              <li className="hover:text-gray-50">Student</li>
-            </Link>
-          </ul>
+          {isMobMenuOpen && (
+            <motion.ul
+              className="bg-gray-800 items-end space-x-5 space-y-3 mt-3 p-5 rounded-lg text-gray-200 flex flex-col"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ type: "easeOut" }}
+            >
+              <Link href="/" onClick={handleOpenMenu}>
+                <li className="hover:text-gray-50">Admin</li>
+              </Link>
+              <Link href="/" onClick={handleOpenMenu}>
+                <li className="hover:text-gray-50">Assessment</li>
+              </Link>
+              <Link href="/" onClick={handleOpenMenu}>
+                <li className="hover:text-gray-50">Student</li>
+              </Link>
+            </motion.ul>
+          )}
         </div>
       </div>
     </>
