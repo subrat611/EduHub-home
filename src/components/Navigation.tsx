@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { easeIn, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { MenuCloseIconBuddyIcon, MenuIconBuddyIcon } from "./icons";
