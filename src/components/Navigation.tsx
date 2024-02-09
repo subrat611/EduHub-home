@@ -12,7 +12,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-2 left-[50%] -translate-x-[50%] w-[95%] max-w-[780px] rounded-lg bg-[#252422] min-h-14">
+    <nav className="fixed top-2 left-[50%] -translate-x-[50%] w-[95%] max-w-[780px] rounded-lg bg-[#252422] min-h-14 z-10">
       <div className="flex items-center justify-between px-3">
         <Link href="/">
           <div className="flex items-center">

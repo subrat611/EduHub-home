@@ -8,7 +8,7 @@ const Features = () => {
         Elevate Your Learning Experience <br /> with Our Dynamic Features
       </h1>
       <div className="mt-10">
-        <div className="shadow-sm border rounded-lg px-3 py-5 my-5">
+        <div className="shadow-sm border rounded-lg px-4 py-5 my-5 overflow-hidden">
           <div>
             <p className="text-lg md:text-xl font-medium text-gray-800">
               Course Creation and Management
@@ -22,6 +22,13 @@ const Features = () => {
                 crafted to provide comprehensive learning experiences.
               </li>
             </ol>
+            <div className="rounded-md overflow-hidden border shadow-sm mt-5">
+              <img
+                src="/create-course.png"
+                alt="create-course-demo"
+                className="object-cover object-[-10px_20px] scale-125 -rotate-3"
+              />
+            </div>
           </div>
         </div>
 
