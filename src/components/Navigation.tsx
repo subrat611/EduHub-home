@@ -12,8 +12,8 @@ const Navigation = () => {
   };
 
   return (
-    <>
-      <nav className="hidden fixed top-2 left-[50%] -translate-x-[50%] w-[780px] bg-[#252422] rounded-lg h-14 text-gray-100 md:flex items-center justify-between px-3">
+    <nav className="fixed top-2 left-[50%] -translate-x-[50%] w-[95%] max-w-[780px] rounded-lg bg-[#252422] min-h-14">
+      <div className="flex items-center justify-between px-3">
         <Link href="/">
           <div className="flex items-center">
             <svg
@@ -54,7 +54,7 @@ const Navigation = () => {
             <p className="font-semibold text-gray-100">EduHub</p>
           </div>
         </Link>
-        <ul className="flex items-center space-x-5 mr-5">
+        <ul className="items-center space-x-5 mr-5 hidden text-gray-100 md:flex">
           <Link href="/">
             <li className="hover:text-gray-50">Admin</li>
           </Link>
@@ -65,40 +65,37 @@ const Navigation = () => {
             <li className="hover:text-gray-50">Student</li>
           </Link>
         </ul>
-      </nav>
-      <div className="fixed top-5 right-5 md:hidden">
-        <div className="flex flex-col items-end">
-          <Button
-            className={`bg-gray-800 p-2 ${
-              isMobMenuOpen
-                ? "rounded-full flex items-center justify-center"
-                : "rounded-sm"
-            }`}
-            onClick={handleOpenMenu}
-          >
-            {isMobMenuOpen ? <MenuCloseIconBuddyIcon /> : <MenuIconBuddyIcon />}
-          </Button>
-          {isMobMenuOpen && (
-            <motion.ul
-              className="bg-gray-800 items-end space-x-5 space-y-3 mt-3 p-5 rounded-lg text-gray-200 flex flex-col"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ type: "easeOut" }}
-            >
-              <Link href="/" onClick={handleOpenMenu}>
-                <li className="hover:text-gray-50">Admin</li>
-              </Link>
-              <Link href="/" onClick={handleOpenMenu}>
-                <li className="hover:text-gray-50">Assessment</li>
-              </Link>
-              <Link href="/" onClick={handleOpenMenu}>
-                <li className="hover:text-gray-50">Student</li>
-              </Link>
-            </motion.ul>
-          )}
-        </div>
+        <Button
+          className={`bg-[#252422] hover:bg-gray-900 p-2 md:hidden ${
+            isMobMenuOpen
+              ? "rounded-full flex items-center justify-center"
+              : "rounded-sm"
+          }`}
+          onClick={handleOpenMenu}
+        >
+          {isMobMenuOpen ? <MenuCloseIconBuddyIcon /> : <MenuIconBuddyIcon />}
+        </Button>
       </div>
-    </>
+
+      {isMobMenuOpen && (
+        <motion.ul
+          className="items-end space-x-5 space-y-3 p-5  text-gray-200 flex flex-col md:hidden"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ type: "easeOut" }}
+        >
+          <Link href="/" onClick={handleOpenMenu}>
+            <li className="hover:text-gray-50">Admin</li>
+          </Link>
+          <Link href="/" onClick={handleOpenMenu}>
+            <li className="hover:text-gray-50">Assessment</li>
+          </Link>
+          <Link href="/" onClick={handleOpenMenu}>
+            <li className="hover:text-gray-50">Student</li>
+          </Link>
+        </motion.ul>
+      )}
+    </nav>
   );
 };
 
