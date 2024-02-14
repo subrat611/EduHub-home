@@ -6,4 +6,4 @@
 
 ## User Types
 
-![usertypes](https://github.com/subrat611/EduHub-home/assets/77252075/ff7898a0-d428-4457-bff0-5a1bee5b6371)
+<img src="https://github.com/subrat611/EduHub-home/assets/77252075/ff7898a0-d428-4457-bff0-5a1bee5b6371" width="200px" height="200px" />
