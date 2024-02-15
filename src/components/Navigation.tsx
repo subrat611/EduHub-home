@@ -109,7 +109,11 @@ const Navigation = () => {
           <Link href="/" onClick={handleOpenMenu}>
             <li className="hover:text-gray-50">Admin</li>
           </Link>
-          <a href="/" target="_blank" rel="noopener">
+          <a
+            href="https://opjueduhub-assessment.vercel.app/"
+            target="_blank"
+            rel="noopener"
+          >
             <li className="hover:text-gray-50">Assessment</li>
           </a>
           <Link href="/" onClick={handleOpenMenu}>
