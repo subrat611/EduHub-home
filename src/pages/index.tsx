@@ -1,5 +1,7 @@
 import { useRef } from "react";
 import { Inter } from "next/font/google";
+import { Toaster } from "react-hot-toast";
+
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import Features from "@/components/Features";
@@ -18,6 +20,7 @@ export default function Home() {
         <Features />
       </div>
       <Footer />
+      <Toaster />
     </main>
   );
 }

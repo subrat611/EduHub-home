@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import toast from "react-hot-toast";
+
 import { Button } from "./ui/button";
 import { MenuCloseIconBuddyIcon, MenuIconBuddyIcon } from "./icons";
 
@@ -9,9 +11,23 @@ const Navigation = () => {
 
   const handleOpenMenu = () => {
     setIsMobMenuOpen((prev) => !prev);
+
+    if (isMobMenuOpen) {
+      showUnderDevelopmentAlert();
+    }
   };
 
-  const showUnderDevelopmentAlert = () => {};
+  const showUnderDevelopmentAlert = () => {
+    toast("The portal is under development...", {
+      duration: 2000,
+      position: "bottom-center",
+      icon: "🚧",
+      style: {
+        background: "#ffee99",
+        color: "#202020",
+      },
+    });
+  };
 
   return (
     <nav className="fixed top-2 left-[50%] -translate-x-[50%] w-[95%] max-w-[780px] rounded-lg bg-[#252422] min-h-14 z-10">
@@ -63,7 +79,7 @@ const Navigation = () => {
           <a href="https://opjueduhub-assessment.vercel.app/" target="_blank">
             <li className="hover:text-gray-50">Assessment</li>
           </a>
-          <Link href="/">
+          <Link href="/" onClick={showUnderDevelopmentAlert}>
             <li className="hover:text-gray-50">Student</li>
           </Link>
         </ul>
@@ -89,9 +105,9 @@ const Navigation = () => {
           <Link href="/" onClick={handleOpenMenu}>
             <li className="hover:text-gray-50">Admin</li>
           </Link>
-          <Link href="/" onClick={handleOpenMenu}>
+          <a href="/" target="_blank">
             <li className="hover:text-gray-50">Assessment</li>
-          </Link>
+          </a>
           <Link href="/" onClick={handleOpenMenu}>
             <li className="hover:text-gray-50">Student</li>
           </Link>
