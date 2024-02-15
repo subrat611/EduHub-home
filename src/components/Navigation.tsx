@@ -11,6 +11,8 @@ const Navigation = () => {
     setIsMobMenuOpen((prev) => !prev);
   };
 
+  const showUnderDevelopmentAlert = () => {};
+
   return (
     <nav className="fixed top-2 left-[50%] -translate-x-[50%] w-[95%] max-w-[780px] rounded-lg bg-[#252422] min-h-14 z-10">
       <div className="flex items-center justify-between px-3">
@@ -55,12 +57,12 @@ const Navigation = () => {
           </div>
         </Link>
         <ul className="items-center space-x-5 mr-5 hidden text-gray-100 md:flex">
-          <Link href="/">
+          <Link href="/" onClick={showUnderDevelopmentAlert}>
             <li className="hover:text-gray-50">Admin</li>
           </Link>
-          <Link href="/">
+          <a href="https://opjueduhub-assessment.vercel.app/" target="_blank">
             <li className="hover:text-gray-50">Assessment</li>
-          </Link>
+          </a>
           <Link href="/">
             <li className="hover:text-gray-50">Student</li>
           </Link>
