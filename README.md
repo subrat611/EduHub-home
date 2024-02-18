@@ -14,7 +14,7 @@
 
 **Assessment repo**: https://github.com/subrat611/EduHub-assessment
 
-**Student repo**:
+**Student repo**: https://github.com/subrat611/EduHub-student
 
 ## 🔨 Technologies
 
