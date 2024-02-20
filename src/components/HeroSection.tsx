@@ -20,7 +20,7 @@ const HeroSection = () => {
           </span>
           App is under development
         </p>
-        <p className="text-2xl text-center md:text-5xl capitalize font-medium">
+        <p className="text-2xl text-center md:text-5xl capitalize font-semibold">
           Empower Your Learning Journey <br /> at o.p jindal university
         </p>
         <p className="capitalize text-center my-5 text-lg md:text-xl text-gray-700">
