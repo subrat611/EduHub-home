@@ -14,6 +14,12 @@ const HeroSection = () => {
   return (
     <div className="h-screen w-full flex justify-center items-center">
       <div className="h-[40vh] w-[90vw] md:w-[50vw] flex flex-col items-center">
+        <p className="py-1 px-4 bg-gray-950/10 border border-gray-300 text-gray-950 font-medium rounded-full mb-5">
+          <span className="rounded-full bg-gray-800 px-4 py-1 border border-gray-500 shadow-sm inline-block mr-3">
+            🚧
+          </span>
+          App is under development
+        </p>
         <p className="text-2xl text-center md:text-5xl capitalize font-medium">
           Empower Your Learning Journey <br /> at o.p jindal university
         </p>
