@@ -74,17 +74,23 @@ const Navigation = () => {
         </Link>
         <ul className="items-center space-x-5 mr-5 hidden text-gray-100 md:flex">
           <Link href="/" onClick={showUnderDevelopmentAlert}>
-            <li className="hover:text-gray-50">Admin</li>
+            <li className="hover:text-gray-800 hover:bg-gray-200 rounded-full px-3 py-1">
+              Admin
+            </li>
           </Link>
           <a
             href="https://opjueduhub-assessment.vercel.app/"
             target="_blank"
             rel="noopener"
           >
-            <li className="hover:text-gray-50">Assessment</li>
+            <li className="hover:text-gray-800 hover:bg-gray-200 rounded-full px-3 py-1">
+              Assessment
+            </li>
           </a>
           <Link href="/" onClick={showUnderDevelopmentAlert}>
-            <li className="hover:text-gray-50">Student</li>
+            <li className="hover:text-gray-800 hover:bg-gray-200 rounded-full px-3 py-1">
+              Student
+            </li>
           </Link>
         </ul>
         <Button
@@ -107,17 +113,23 @@ const Navigation = () => {
           transition={{ type: "easeOut" }}
         >
           <Link href="/" onClick={handleOpenMenu}>
-            <li className="hover:text-gray-50">Admin</li>
+            <li className="hover:text-gray-800 hover:bg-gray-200 rounded-full px-3 py-1">
+              Admin
+            </li>
           </Link>
           <a
             href="https://opjueduhub-assessment.vercel.app/"
             target="_blank"
             rel="noopener"
           >
-            <li className="hover:text-gray-50">Assessment</li>
+            <li className="hover:text-gray-800 hover:bg-gray-200 rounded-full px-3 py-1">
+              Assessment
+            </li>
           </a>
           <Link href="/" onClick={handleOpenMenu}>
-            <li className="hover:text-gray-50">Student</li>
+            <li className="hover:text-gray-800 hover:bg-gray-200 rounded-full px-3 py-1">
+              Student
+            </li>
           </Link>
         </motion.ul>
       )}
